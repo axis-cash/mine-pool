@@ -1,0 +1,8 @@
+.DS_Store
+config.json
+testnet.json
+/czero/lib/*
+/build/_workspace/
+/build/bin/
+.idea
+cmake-build-*
