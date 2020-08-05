@@ -26,6 +26,9 @@ var zeroHash = regexp.MustCompile("^0?x?0+$")
 func IsValidBase58Address(s string) bool {
 
 	out := base58.Decode(s)
+	if len(out) == 97 {
+                out = base58.Decode(s[1:])
+        }
 	if len(out) == 96 {
 		pkr := c_type.PKr{}
 		copy(pkr[:], out[:])
