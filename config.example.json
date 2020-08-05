@@ -1,5 +1,5 @@
 {
-	"threads": 4,
+	"threads": 2,
 	"coin": "axis",
 	"name": "main",
 	"pprof": false,
@@ -13,14 +13,14 @@
 		"behindReverseProxy": false,
 		"blockRefreshInterval": "120ms",
 		"stateUpdateInterval": "3s",
-		"difficulty": 200000000,
+		"difficulty": 200000,
 		"hashrateExpiration": "3h",
 
 		"healthCheck": true,
 		"maxFails": 100,
 
 		"stratum": {
-			"enabled": true,
+			"enabled": false,
 			"listen": "0.0.0.0:8008",
 			"timeout": "120s",
 			"maxConn": 8192
@@ -66,12 +66,12 @@
 	"upstream": [
 		{
 			"name": "main",
-			"url": "http://127.0.0.1:8546",
+			"url": "http://127.0.0.1:8545",
 			"timeout": "15s"
 		},
 		{
 			"name": "backup",
-			"url": "http://127.0.0.2:8546",
+			"url": "http://127.0.0.2:8545",
 			"timeout": "15s"
 		}
 	],
@@ -85,24 +85,24 @@
 
 	"unlocker": {
 		"enabled": true,
-		"poolFee": 1.0,
+		"poolFee": 5.0,
 		"poolFeeAddress": "",
-		"donate": false,
+		"donate": true,
 		"depth": 120,
 		"immatureDepth": 20,
 		"keepTxFees": false,
 		"interval": "10m",
-		"daemon": "http://127.0.0.1:8546",
+		"daemon": "http://127.0.0.1:8545",
 		"timeout": "10s"
 	},
 
 	"payouts": {
 		"enabled": true,
-		"requirePeers": 1,
-		"interval": "1m",
-		"daemon": "http://127.0.0.1:8546",
+		"requirePeers": 10,
+		"interval": "12h",
+		"daemon": "http://127.0.0.1:8545",
 		"timeout": "3000s",
-		"address": "UWK17mkwWeaE7wzZDwUr9CerL8MBDXw5gbz3JmcmT4WNBpyGDrufAUeEwjX8CLjxBKrZ53QjdB6tbZHPcwrgpZu672Gc2aApy1yp5JZbQnMRM5hRzvyU3B3QvSESYE1gE3d",
+		"address": "38FE3kWuF2zfvvqzS7ZqjYmcSsJdFBgDrxvd9K585fiiQ93j89GTRpN9ccfhER5iVXAkrK9opCnB9AMrJWdh8RwS",
 		"gas": "25000",
 		"gasPrice": "1000000000",
 		"autoGas": false,

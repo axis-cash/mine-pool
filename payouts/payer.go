@@ -81,14 +81,14 @@ func (u *PayoutsProcessor) Start() {
 	if u.config.Exchange {
 		payments := u.backend.GetPendingExchangePayments()
 		if len(payments) > 0 {
-			log.Printf("Previous payout failed, you have to resolve it. List of failed payments:\n %v",
+			log.Printf("Previous exchange payout failed, you have to resolve it. List of failed payments:\n %d %v", len(payments),
 				formatPendingPayments(payments))
 			return
 		}
 	} else {
 		payments := u.backend.GetPendingPayments()
 		if len(payments) > 0 {
-			log.Printf("Previous payout failed, you have to resolve it. List of failed payments:\n %v",
+			log.Printf("Previous payout failed, you have to resolve it. List of failed payments:\n %d %v", len(payments),
 				formatPendingPayments(payments))
 			return
 		}

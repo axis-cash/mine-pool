@@ -3,7 +3,7 @@
     <h1>How To Mine</h1>
   </div>
   <p class="lead">In order to mine on this pool you need to have an
-    <a href="https://github.com/axis-cash/axisminer/releases" rel="nofollow" target="_blank">cminer</a> installation
+    <a href="https://github.com/axis-cash/axisminer/releases" rel="nofollow" target="_blank">axisminer</a> installation
     pointed to<br/><code>
       <span style="word-break: break-all; white-space: normal;">
         {{config.HttpHost}}:{{config.HttpPort}}/YOUR_AXIS_ADDRESS/RIG_ID
@@ -16,7 +16,7 @@
       <strong>Example:</strong>
       <code>
             <span style="word-break: break-all; white-space: normal;">
-              NDHzksFiYFzpdq2xWAssmenN26K7dLWTJnynMmwK5KxqmM6CcGxGF1goL9hfH5TEosst5oFeTWvP5pys4L8hbF11t3fGyU77thP6Ey9s2LdjcFwygi82VivbEZU2ygMCHFL
+              38FE3kWuF2zfvvqzS7ZqjYmcSsJdFBgDrxvd9K585fiiQ93j89GTRpN9ccfhER5iVXAkrK9opCnB9AMrJWdh8RwS
             </span>
       </code>.
     </dd>
@@ -30,12 +30,12 @@
   <p>
     <strong>Full example:</strong>
     <span style="word-break: break-all; white-space: normal;">
-          cminer -P {{config.HttpHost}}:{{config.HttpPort}}/NDHzksFiYFzpdq2xWAssmenN26K7dLWTJnynMmwK5KxqmM6CcGxGF1goL9hfH5TEosst5oFeTWvP5pys4L8hbF11t3fGyU77thP6Ey9s2LdjcFwygi82VivbEZU2ygMCHFL/myfarm --cpu=0
+          axisminer -P {{config.HttpHost}}:{{config.HttpPort}}/38FE3kWuF2zfvvqzS7ZqjYmcSsJdFBgDrxvd9K585fiiQ93j89GTRpN9ccfhER5iVXAkrK9opCnB9AMrJWdh8RwS/myfarm --cpu=0
     </span>
 
     <div class="alert alert-info" role="alert">
         <span class="sr-only">Notice:</span>
-         Set --cpu=0, cminer will set the number of Mining Thread to the number of CPU Threads minus one.
+         Set --cpu=0, axisminer will set the number of Mining Thread to the number of CPU Threads minus one.
      </div>
   </p>
 
