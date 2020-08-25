@@ -170,6 +170,7 @@ func (u *BlockUnlocker) handleBlock(block *rpc.GetBlockReply, candidate *storage
 	}
 	candidate.Height = correctHeight
 	reward := getConstReward(big.NewInt(candidate.Height), big.NewInt(candidate.Difficulty))
+	log.Printf("Block height: %d Difficulty:%l Reward: %l", big.NewInt(candidate.Height), big.NewInt(candidate.Difficulty), reward)
 
 	// Add TX fees
 	extraTxReward, err := u.getExtraRewardForTx(block)
@@ -542,18 +543,18 @@ func getConstRewardv4(Number, Difficulty *big.Int) *big.Int {
 	return reward.Div(reward, new(big.Int).Exp(big2, i, nil))
 }
 
-func getConstRewardsV5(Number, Difficulty *big.Int) *big.Int {
+func getConstRewardv5(Number, Difficulty *big.Int) *big.Int {
 
-	diff := new(big.Int).Div(bdiff, big.NewInt(1000000000))
+	diff := new(big.Int).Div(Difficulty, big.NewInt(1000000000))
 	reward := new(big.Int).Add(new(big.Int).Mul(argA, diff), argB)
 
 	if reward.Cmp(lReward) < 0 {
 		reward = new(big.Int).Set(lReward)
-	} else if reward.Cmp(hRewardV4) > 0 {
-		reward = new(big.Int).Set(hRewardV4)
+	} else if reward.Cmp(hRewardv4) > 0 {
+		reward = new(big.Int).Set(hRewardv4)
 	}
 	reward.Div(reward, big.NewInt(2))
-	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(number, halveNimber), interval), big1)
+	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(Number, halveNimber), interval), big1)
 	reward.Div(reward, new(big.Int).Exp(big2, i, nil))
 
 	return reward 
