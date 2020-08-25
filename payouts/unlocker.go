@@ -475,7 +475,9 @@ var (
 )
 
 func getConstReward(Number, Difficulty *big.Int) *big.Int {
-	if Number.Cmp(big.NewInt(int64(axisparam.XIP4())))>=0{
+	if Number.Cmp(big.NewInt(int64(axisparam.XIP7())))>=0{
+		return getConstRewardv5(Number, Difficulty)
+	}else if Number.Cmp(big.NewInt(int64(axisparam.XIP4())))>=0{
 		return getConstRewardv4(Number, Difficulty)
 	}else if Number.Cmp(big.NewInt(int64(axisparam.XIP3()))) >= 0 {
 		return getConstRewardv3(Number, Difficulty)
@@ -540,4 +542,19 @@ func getConstRewardv4(Number, Difficulty *big.Int) *big.Int {
 	return reward.Div(reward, new(big.Int).Exp(big2, i, nil))
 }
 
+func getConstRewardsV5(Number, Difficulty *big.Int) *big.Int {
 
+	diff := new(big.Int).Div(bdiff, big.NewInt(1000000000))
+	reward := new(big.Int).Add(new(big.Int).Mul(argA, diff), argB)
+
+	if reward.Cmp(lReward) < 0 {
+		reward = new(big.Int).Set(lReward)
+	} else if reward.Cmp(hRewardV4) > 0 {
+		reward = new(big.Int).Set(hRewardV4)
+	}
+	reward.Div(reward, big.NewInt(2))
+	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(number, halveNimber), interval), big1)
+	reward.Div(reward, new(big.Int).Exp(big2, i, nil))
+
+	return reward 
+}

@@ -1,0 +1,166 @@
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-welcome-page -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-ajax -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-htmlbars-inline-precompile -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-qunit -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-qunit -> ember-cli-test-loader -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-test-loader -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-export-application-global -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-resolver -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> ember-getowner-polyfill -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-messageformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-messageformat -> intl-messageformat-parser -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> intl-messageformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> intl-messageformat -> intl-messageformat-parser -> ember-cli-babel
+WARNING: Node v10.21.0 has currently not been tested against Ember CLI and may result in unexpected behaviour.
+Could not start watchman; falling back to NodeWatcher for file system events.
+Visit http://ember-cli.com/user-guide/#watchman for more info.
+
+Just getting started with Ember? Please visit http://localhost:8082/ember-getting-started to get going
+
+Livereload server on http://localhost:49152
+Serving on http://localhost:8082/
+[API] Warning: The .read and .rebuild APIs will stop working in the next Broccoli version
+[API] Warning: Use broccoli-plugin instead: https://github.com/broccolijs/broccoli-plugin
+[API] Warning: Plugin uses .read/.rebuild API: [object Object]
+[API] Warning: Plugin uses .read/.rebuild API: [object Object]
+WARN: Output exceeds 32000 characters
+
+Build successful - 10321ms.
+
+
+
+Slowest Nodes (totalTime => 5% )              | Total (avg)         
+----------------------------------------------+---------------------
+UglifyWriter (1)                              | 9213ms              
+
+cleaning up...
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-welcome-page -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-ajax -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-htmlbars-inline-precompile -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-qunit -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-qunit -> ember-cli-test-loader -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-test-loader -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-export-application-global -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-resolver -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> ember-getowner-polyfill -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-messageformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-messageformat -> intl-messageformat-parser -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> intl-messageformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> intl-messageformat -> intl-messageformat-parser -> ember-cli-babel
+WARNING: Node v10.21.0 has currently not been tested against Ember CLI and may result in unexpected behaviour.
+Could not start watchman; falling back to NodeWatcher for file system events.
+Visit http://ember-cli.com/user-guide/#watchman for more info.
+
+Just getting started with Ember? Please visit http://localhost:8082/ember-getting-started to get going
+
+Livereload server on http://localhost:49152
+Serving on http://localhost:8082/
+[API] Warning: The .read and .rebuild APIs will stop working in the next Broccoli version
+[API] Warning: Use broccoli-plugin instead: https://github.com/broccolijs/broccoli-plugin
+[API] Warning: Plugin uses .read/.rebuild API: [object Object]
+[API] Warning: Plugin uses .read/.rebuild API: [object Object]
+WARN: Output exceeds 32000 characters
+
+Build successful - 9834ms.
+
+
+
+Slowest Nodes (totalTime => 5% )              | Total (avg)         
+----------------------------------------------+---------------------
+UglifyWriter (1)                              | 8760ms              
+
+file added environment.js~
+file changed environment.js
+file deleted environment.js~
+WARN: Output exceeds 32000 characters
+
+Build successful - 8868ms.
+
+
+
+Slowest Nodes (totalTime => 5% )              | Total (avg)         
+----------------------------------------------+---------------------
+UglifyWriter (1)                              | 8610ms              
+
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-welcome-page -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-ajax -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-htmlbars-inline-precompile -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-qunit -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-qunit -> ember-cli-test-loader -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-test-loader -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-export-application-global -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-resolver -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> ember-getowner-polyfill -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-messageformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-messageformat -> intl-messageformat-parser -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> intl-messageformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> intl-messageformat -> intl-messageformat-parser -> ember-cli-babel
+WARNING: Node v10.21.0 has currently not been tested against Ember CLI and may result in unexpected behaviour.
+Could not start watchman; falling back to NodeWatcher for file system events.
+Visit http://ember-cli.com/user-guide/#watchman for more info.
+
+Just getting started with Ember? Please visit http://localhost:8082/ember-getting-started to get going
+
+Livereload server on http://localhost:49152
+Serving on http://localhost:8082/
+[API] Warning: The .read and .rebuild APIs will stop working in the next Broccoli version
+[API] Warning: Use broccoli-plugin instead: https://github.com/broccolijs/broccoli-plugin
+[API] Warning: Plugin uses .read/.rebuild API: [object Object]
+[API] Warning: Plugin uses .read/.rebuild API: [object Object]
+WARN: Output exceeds 32000 characters
+
+Build successful - 15667ms.
+
+
+
+Slowest Nodes (totalTime => 5% )              | Total (avg)         
+----------------------------------------------+---------------------
+UglifyWriter (1)                              | 13768ms             
+
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-welcome-page -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-ajax -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-htmlbars-inline-precompile -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-qunit -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-qunit -> ember-cli-test-loader -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-cli-test-loader -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-export-application-global -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-resolver -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> ember-getowner-polyfill -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-messageformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-messageformat -> intl-messageformat-parser -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> intl-messageformat -> ember-cli-babel
+DEPRECATION: ember-cli-babel 5.x has been deprecated. Please upgrade to at least ember-cli-babel 6.6. Version 5.2.8 located: axis-pool -> ember-intl -> intl-relativeformat -> intl-messageformat -> intl-messageformat-parser -> ember-cli-babel
+WARNING: Node v14.7.0 has currently not been tested against Ember CLI and may result in unexpected behaviour.
+Could not start watchman; falling back to NodeWatcher for file system events.
+Visit http://ember-cli.com/user-guide/#watchman for more info.
+
+Just getting started with Ember? Please visit http://localhost:8082/ember-getting-started to get going
+
+Livereload server on http://localhost:49152
+Serving on http://localhost:8082/
+[API] Warning: The .read and .rebuild APIs will stop working in the next Broccoli version
+[API] Warning: Use broccoli-plugin instead: https://github.com/broccolijs/broccoli-plugin
+[API] Warning: Plugin uses .read/.rebuild API: [object Object]
+[API] Warning: Plugin uses .read/.rebuild API: [object Object]
+WARN: Output exceeds 32000 characters
+
+Build successful - 11403ms.
+
+
+
+Slowest Nodes (totalTime => 5% )              | Total (avg)         
+----------------------------------------------+---------------------
+UglifyWriter (1)                              | 10057ms             
+

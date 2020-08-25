@@ -15,14 +15,14 @@ module.exports = function(environment) {
 
     APP: {
       // API host and port
-      ApiUrl: '//pool.axis.cash:81/',
+      ApiUrl: '//kr.axis.cash:80/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://pool.axis.cash',
+      HttpHost: 'http://kr.axis.cash',
       HttpPort: 9999,
 
       // Stratum mining endpoint
-      StratumHost: 'pool.axis.cash',
+      StratumHost: 'kr.axis.cash',
       StratumPort: 8008,
 
 
