@@ -1,6 +1,8 @@
 .DS_Store
 config.json
 testnet.json
+nohup.out
+/www-zh/nohup.out
 /ethash/*
 /czero/lib/*
 /build/_workspace/
