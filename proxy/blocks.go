@@ -1,6 +1,7 @@
 package proxy
 
 import (
+	"errors"
 	"log"
 	"math/big"
 	"strconv"
