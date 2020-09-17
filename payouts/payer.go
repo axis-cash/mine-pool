@@ -298,6 +298,9 @@ func (u *PayoutsProcessor) exhcange_process() {
 	totalAmount := big.NewInt(0)
 	for _, login := range payees {
 		out := base58.Decode(login)
+		if len(out) > 96 {
+                	out = base58.Decode(login[1:])
+        	}
 		if len(out) != 64 && len(out) != 96 {
 			fmt.Printf("invalid address %v,length is %v", login, len(out))
 			continue
