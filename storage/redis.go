@@ -2,7 +2,6 @@ package storage
 
 import (
 	"fmt"
-	"log"
 	"math/big"
 	"strconv"
 	"strings"
