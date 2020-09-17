@@ -382,7 +382,6 @@ type PendingPayment struct {
 
 func (r *RedisClient) GetPendingPayments() []*PendingPayment {
 	raw := r.client.ZRevRangeWithScores(r.formatKey("payments", "pending"), 0, -1)
-	log.Printf("key: %v\n", raw)
 	var result []*PendingPayment
 	for _, v := range raw.Val() {
 		// timestamp -> "address:amount"

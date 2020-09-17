@@ -103,6 +103,10 @@ func (s *ProxyServer) fetchPendingBlock() (*rpc.GetBlockReplyPart, uint64, int64
 		log.Printf("Error while refreshing pending block on %s: %s", rpc.Name, err)
 		return nil, 0, 0, err
 	}
+	if reply == nil {
+		log.Printf("Error while refreshing pending block on %s: %s", rpc.Name, "result is nil")
+		return nil, 0, 0, errors.New("get pending block result is nil")
+	}
 	blockNumber, err := strconv.ParseUint(strings.Replace(reply.Number, "0x", "", -1), 16, 64)
 	if err != nil {
 		log.Println("Can't parse pending block number")
