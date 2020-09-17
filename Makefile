@@ -39,7 +39,7 @@ pool-linux-amd64-v3:
 	@echo "Linux centos amd64 cross compilation done:"
 	@ls -ld $(GOBIN)/mine-pool-v3-linux-* | grep amd64
 
-gaxis-linux-amd64-v4:
+gero-linux-amd64-v4:
 	build/env.sh linux-v4 go run build/pci.go xgo -- --go=$(GO) --out=mine-pool-v4 --targets=linux/amd64 -v ./
 	@echo "Linux  ubuntu amd64 cross compilation done:"
 	@ls -ld $(GOBIN)/mine-pool-v4-linux-* | grep amd64

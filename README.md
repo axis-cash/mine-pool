@@ -8,7 +8,7 @@ Mine pool is a open soruce Axis mining pool using PPLNS mode
 
 * Support for HTTP and Stratum mining
 * Detailed block stats with luck percentage and full reward
-* Failover gaxis instances: gaxis high availability built in
+* Failover gero instances: gero high availability built in
 * Modern beautiful Ember.js frontend
 * Separate stats for workers: can highlight timed-out workers so miners can perform maintenance of rigs
 * JSON-API for stats
@@ -22,14 +22,14 @@ Mine pool is a open soruce Axis mining pool using PPLNS mode
 Dependencies:
 
   * go >= 1.9
-  * gaxis
+  * gero
   * redis-server >= 2.8.0
   * nodejs >= 4 LTS
   * nginx
 
 **I highly recommend to use Ubuntu 16.04 LTS.**
 
-First download the lastest [gaxis](https://github.com/axis-cash/go-axis/releases).
+First download the lastest [gero](https://github.com/axis-cash/go-axis/releases).
 
 Clone & compile:
 
@@ -298,10 +298,10 @@ I recommend this deployment strategy:
 * Unlocker and payouts instance - 1x each (strict!)
 * API instance - 1x
 
-gaxis deployment strategy:
+gero deployment strategy:
 
 * Mining instance -2x (main and backup)
-* Unlocker and payouts instanch -1x (when you start gaxis instance you must add `--exchange  --rpcapi net,axis,exchange `)
+* Unlocker and payouts instanch -1x (when you start gero instance you must add `--exchange  --rpcapi net,axis,exchange `)
 
 ### Notes
 

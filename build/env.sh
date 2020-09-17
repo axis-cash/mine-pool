@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
@@ -72,7 +72,6 @@ fi
 # Set up the environment to use the workspace.
 # Also add Godeps workspace so we build using canned dependencies.
 GOPATH="$workspace"
-GOPATH="/root/gopath"
 GOBIN="$root/build/bin"
 export GOPATH GOBIN
 

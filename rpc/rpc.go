@@ -309,12 +309,12 @@ func (r *RPCClient) GetMaxAvailable(address string) (*big.Int, error) {
 	if err != nil {
 		return nil, err
 	}
-	var reply *big.Int
+	var reply *Big
 	err = json.Unmarshal(*rpcResp.Result, &reply)
 	if err != nil {
 		return nil, err
 	}
-	return reply, err
+	return reply.ToInt(), err
 }
 
 func (r *RPCClient) ClearExchange(addres string) error {

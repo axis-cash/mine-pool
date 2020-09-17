@@ -17,7 +17,7 @@ import (
 
 var (
 
-	// Files that end up in the gaxis-alltools*.zip archive.
+	// Files that end up in the gero-alltools*.zip archive.
 	allToolsArchiveFiles = []string{
 		executablePath("mine-pool"),
 	}

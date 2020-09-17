@@ -81,14 +81,14 @@ func (u *PayoutsProcessor) Start() {
 	if u.config.Exchange {
 		payments := u.backend.GetPendingExchangePayments()
 		if len(payments) > 0 {
-			log.Printf("Previous exchange payout failed, you have to resolve it. List of failed payments:\n %d %v", len(payments),
+			log.Printf("Previous payout failed, you have to resolve it. List of failed payments:\n %v",
 				formatPendingPayments(payments))
 			return
 		}
 	} else {
 		payments := u.backend.GetPendingPayments()
 		if len(payments) > 0 {
-			log.Printf("Previous payout failed, you have to resolve it. List of failed payments:\n %d %v", len(payments),
+			log.Printf("Previous payout failed, you have to resolve it. List of failed payments:\n %v",
 				formatPendingPayments(payments))
 			return
 		}
@@ -178,8 +178,8 @@ func (u *PayoutsProcessor) process() {
 			break
 		}
 		if poolBalance.Cmp(amountInWei) < 0 {
-			err := fmt.Errorf("Not enough balance for payment, address %s, need %s Wei, pool has %s Wei",
-				u.config.Address, amountInWei.String(), poolBalance.String())
+			err := fmt.Errorf("Not enough balance for payment, need %s Wei, pool has %s Wei",
+				amountInWei.String(), poolBalance.String())
 			u.halt = true
 			u.lastFail = err
 			break
@@ -393,7 +393,7 @@ func (u *PayoutsProcessor) exhcange_process() {
 		}
 		err = u.rpc.CommitTx(rawData, txHash)
 		if err != nil {
-			log.Printf("Failed to CommitTx %v :", txHash, err)
+			log.Printf("Failed to CommitTx %v :%v", txHash, err)
 			u.halt = true
 			u.rpc.ClearExchange(u.config.Address)
 			u.lastFail = err

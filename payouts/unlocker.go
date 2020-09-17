@@ -170,7 +170,6 @@ func (u *BlockUnlocker) handleBlock(block *rpc.GetBlockReply, candidate *storage
 	}
 	candidate.Height = correctHeight
 	reward := getConstReward(big.NewInt(candidate.Height), big.NewInt(candidate.Difficulty))
-	log.Printf("Block height: %d Difficulty:%l Reward: %l", big.NewInt(candidate.Height), big.NewInt(candidate.Difficulty), reward)
 
 	// Add TX fees
 	extraTxReward, err := u.getExtraRewardForTx(block)
@@ -467,20 +466,20 @@ var (
 	difficultyL3 = big.NewInt(4000000000)
 	difficultyL4 = big.NewInt(17000000000)
 
-	lReward = new(big.Int).Mul(big.NewInt(176), base)
-	hReward = new(big.Int).Mul(big.NewInt(445), base)
-	hRewardv4 = new(big.Int).Mul(big.NewInt(356), base)
+	lReward   = new(big.Int).Mul(big.NewInt(176), base)
+	hReward   = new(big.Int).Mul(big.NewInt(445), base)
+	hRewardV4 = new(big.Int).Mul(big.NewInt(356), base)
 
 	argA, _ = new(big.Int).SetString("985347985347985", 10)
 	argB, _ = new(big.Int).SetString("16910256410256400000", 10)
 )
 
 func getConstReward(Number, Difficulty *big.Int) *big.Int {
-	if Number.Cmp(big.NewInt(int64(axisparam.XIP7())))>=0{
+	if Number.Cmp(big.NewInt(int64(axisparam.XIP7()))) >= 0 {
 		return getConstRewardv5(Number, Difficulty)
-	}else if Number.Cmp(big.NewInt(int64(axisparam.XIP4())))>=0{
+	} else if Number.Cmp(big.NewInt(int64(axisparam.XIP4()))) >= 0 {
 		return getConstRewardv4(Number, Difficulty)
-	}else if Number.Cmp(big.NewInt(int64(axisparam.XIP3()))) >= 0 {
+	} else if Number.Cmp(big.NewInt(int64(axisparam.XIP3()))) >= 0 {
 		return getConstRewardv3(Number, Difficulty)
 	} else {
 		return getConstRewardv2(Number, Difficulty)
@@ -535,8 +534,8 @@ func getConstRewardv4(Number, Difficulty *big.Int) *big.Int {
 
 	if reward.Cmp(lReward) < 0 {
 		reward = new(big.Int).Set(lReward)
-	} else if reward.Cmp(hRewardv4) > 0 {
-		reward = new(big.Int).Set(hRewardv4)
+	} else if reward.Cmp(hRewardV4) > 0 {
+		reward = new(big.Int).Set(hRewardV4)
 	}
 
 	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(Number, halveNimber), interval), big1)
@@ -550,12 +549,11 @@ func getConstRewardv5(Number, Difficulty *big.Int) *big.Int {
 
 	if reward.Cmp(lReward) < 0 {
 		reward = new(big.Int).Set(lReward)
-	} else if reward.Cmp(hRewardv4) > 0 {
-		reward = new(big.Int).Set(hRewardv4)
+	} else if reward.Cmp(hRewardV4) > 0 {
+		reward = new(big.Int).Set(hRewardV4)
 	}
-	reward.Div(reward, big.NewInt(2))
-	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(Number, halveNimber), interval), big1)
-	reward.Div(reward, new(big.Int).Exp(big2, i, nil))
 
-	return reward 
+	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(Number, halveNimber), interval), big1)
+	return reward.Div(reward, new(big.Int).Exp(big2, new(big.Int).Add(i, big1), nil))
+
 }
