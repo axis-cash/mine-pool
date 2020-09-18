@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/btcsuite/btcutil/base58"
+
 	"github.com/axis-cash/mine-pool/storage"
 	"github.com/axis-cash/mine-pool/util"
 )
@@ -260,11 +260,6 @@ func (s *ApiServer) AccountIndex(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Invalid adress %s", login)
 		return
 	}
-	out := base58.Decode(login)
-	if len(out) > 96 {
-		login = login[1:]
-	}
-	log.Printf("Login miner: %s", login)
 
 	reply, ok := s.miners[login]
 	now := util.MakeTimestamp()

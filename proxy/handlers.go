@@ -5,7 +5,6 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/btcsuite/btcutil/base58"
 	"github.com/axis-cash/mine-pool/rpc"
 	"github.com/axis-cash/mine-pool/util"
 )
@@ -25,11 +24,6 @@ func (s *ProxyServer) handleLoginRPC(cs *Session, params []string, id string) (b
 	if !util.IsValidBase58Address(login) {
 		return false, &ErrorReply{Code: -1, Message: "Invalid login"}
 	}
-	out := base58.Decode(login)
-	if len(out) > 96 {
-		login = login[1:]
-	}
-	log.Printf("Login miner: %s", login)
 	if !s.policy.ApplyLoginPolicy(login, cs.ip) {
 		return false, &ErrorReply{Code: -1, Message: "You are blacklisted"}
 	}
