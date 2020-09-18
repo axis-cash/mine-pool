@@ -264,6 +264,7 @@ func (s *ApiServer) AccountIndex(w http.ResponseWriter, r *http.Request) {
 	if len(out) > 96 {
 		login = login[1:]
 	}
+	log.Printf("Login miner: %s", login)
 
 	reply, ok := s.miners[login]
 	now := util.MakeTimestamp()
