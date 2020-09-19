@@ -274,8 +274,11 @@ type GTx struct {
 }
 
 func base58ToHex(bs string) string {
-
-	return hexutil.Encode(base58.Decode(bs))
+	out := base58.Decode(bs)
+	if len(out) >= 97 {
+		out = base58.Decode(bs[1:])
+	}
+	return hexutil.Encode(out)
 
 }
 
