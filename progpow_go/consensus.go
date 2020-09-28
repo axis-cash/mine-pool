@@ -50,7 +50,7 @@ func (ethash *Ethash) Verify(block Block) bool {
 
 	var digest []byte
 	var result []byte
-	if number >= axisparam.XIP3() {
+	if number >= axisparam.XIP1() {
 		dataset := ethash.dataset_async(number)
 		if dataset.generated() {
 			digest, result = progpowFull(dataset.dataset, block.HashNoNonce().Bytes(), block.Nonce(), number)

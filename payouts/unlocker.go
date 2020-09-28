@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/axis-cash/go-axis-import/axisparam"
+	//"github.com/axis-cash/go-axis-import/axisparam"
 
 	"github.com/axis-cash/mine-pool/rpc"
 	"github.com/axis-cash/mine-pool/storage"
@@ -459,59 +459,29 @@ var (
 	base = big.NewInt(1e+17)
 
 	oriReward    = new(big.Int).Mul(big.NewInt(66773505743), big.NewInt(1000000000))
-	interval     = big.NewInt(8294400)
-	halveNimber  = big.NewInt(3057600)
+	interval     = big.NewInt(8760000)
+	halveNimber  = big.NewInt(7908000)
 	difficultyL1 = big.NewInt(340000000)
 	difficultyL2 = big.NewInt(1700000000)
 	difficultyL3 = big.NewInt(4000000000)
 	difficultyL4 = big.NewInt(17000000000)
 
-	lReward   = new(big.Int).Mul(big.NewInt(176), base)
-	hReward   = new(big.Int).Mul(big.NewInt(445), base)
-	hRewardV4 = new(big.Int).Mul(big.NewInt(356), base)
+	lReward   = new(big.Int).Mul(big.NewInt(175), base)
+	hReward   = new(big.Int).Mul(big.NewInt(285), base)
 
 	argA, _ = new(big.Int).SetString("985347985347985", 10)
 	argB, _ = new(big.Int).SetString("16910256410256400000", 10)
 )
 
 func getConstReward(Number, Difficulty *big.Int) *big.Int {
-	if Number.Cmp(big.NewInt(int64(axisparam.XIP7()))) >= 0 {
-		return getConstRewardv5(Number, Difficulty)
-	} else if Number.Cmp(big.NewInt(int64(axisparam.XIP4()))) >= 0 {
-		return getConstRewardv4(Number, Difficulty)
-	} else if Number.Cmp(big.NewInt(int64(axisparam.XIP3()))) >= 0 {
-		return getConstRewardv3(Number, Difficulty)
-	} else {
-		return getConstRewardv2(Number, Difficulty)
-	}
+	//if Number.Cmp(big.NewInt(int64(axisparam.XIP1()))) >= 0 {
+	return getConstRewardv1(Number, Difficulty)
+	//}
 }
 
-func getConstRewardv2(Number, Difficulty *big.Int) *big.Int {
-	rewardStd := new(big.Int).Set(oriReward)
-	if Number.Uint64() >= halveNimber.Uint64() {
-		i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(Number, halveNimber), interval), big1)
-		rewardStd.Div(rewardStd, new(big.Int).Exp(big2, i, nil))
-	}
 
-	var reward *big.Int
-	if Difficulty.Cmp(difficultyL1) < 0 { //<3.4
-		reward = new(big.Int).Mul(big.NewInt(10), base)
-	} else if Difficulty.Cmp(difficultyL2) < 0 { //<17
-		ratio := new(big.Int).Add(new(big.Int).Mul(big.NewInt(56), base), new(big.Int).Mul(big.NewInt(16470000000), new(big.Int).Sub(Difficulty, difficultyL1)))
-		reward = new(big.Int).Div(new(big.Int).Mul(rewardStd, ratio), oriReward)
-	} else if Difficulty.Cmp(difficultyL3) < 0 { //<40
-		ratio := new(big.Int).Add(new(big.Int).Mul(big.NewInt(280), base), new(big.Int).Mul(big.NewInt(2170000000), new(big.Int).Sub(Difficulty, difficultyL2)))
-		reward = new(big.Int).Div(new(big.Int).Mul(rewardStd, ratio), oriReward)
-	} else if Difficulty.Cmp(difficultyL4) < 0 { //<170
-		ratio := new(big.Int).Add(new(big.Int).Mul(big.NewInt(330), base), new(big.Int).Mul(big.NewInt(2590000000), new(big.Int).Sub(Difficulty, difficultyL3)))
-		reward = new(big.Int).Div(new(big.Int).Mul(rewardStd, ratio), oriReward)
-	} else {
-		reward = rewardStd
-	}
-	return reward
-}
+func getConstRewardv1(Number, Difficulty *big.Int) *big.Int {
 
-func getConstRewardv3(Number, Difficulty *big.Int) *big.Int {
 	diff := new(big.Int).Div(Difficulty, big.NewInt(1000000000))
 	reward := new(big.Int).Add(new(big.Int).Mul(argA, diff), argB)
 
@@ -522,38 +492,6 @@ func getConstRewardv3(Number, Difficulty *big.Int) *big.Int {
 	}
 
 	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(Number, halveNimber), interval), big1)
-	reward.Div(reward, new(big.Int).Exp(big2, i, nil))
-
-	return reward
-}
-
-func getConstRewardv4(Number, Difficulty *big.Int) *big.Int {
-
-	diff := new(big.Int).Div(Difficulty, big.NewInt(1000000000))
-	reward := new(big.Int).Add(new(big.Int).Mul(argA, diff), argB)
-
-	if reward.Cmp(lReward) < 0 {
-		reward = new(big.Int).Set(lReward)
-	} else if reward.Cmp(hRewardV4) > 0 {
-		reward = new(big.Int).Set(hRewardV4)
-	}
-
-	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(Number, halveNimber), interval), big1)
 	return reward.Div(reward, new(big.Int).Exp(big2, i, nil))
 }
 
-func getConstRewardv5(Number, Difficulty *big.Int) *big.Int {
-
-	diff := new(big.Int).Div(Difficulty, big.NewInt(1000000000))
-	reward := new(big.Int).Add(new(big.Int).Mul(argA, diff), argB)
-
-	if reward.Cmp(lReward) < 0 {
-		reward = new(big.Int).Set(lReward)
-	} else if reward.Cmp(hRewardV4) > 0 {
-		reward = new(big.Int).Set(hRewardV4)
-	}
-
-	i := new(big.Int).Add(new(big.Int).Div(new(big.Int).Sub(Number, halveNimber), interval), big1)
-	return reward.Div(reward, new(big.Int).Exp(big2, new(big.Int).Add(i, big1), nil))
-
-}
